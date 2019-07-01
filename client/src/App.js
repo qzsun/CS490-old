@@ -39,10 +39,6 @@ class App extends Component {
           </Router>
       </React.Fragment>
     </div>
-    
-
-     
-
   </div>
     
       
