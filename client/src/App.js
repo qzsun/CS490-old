@@ -1,5 +1,11 @@
-import React, { Component } from 'react';
+ import React, { Component } from 'react';
+ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './App.css';
+import { Button } from 'react-bootstrap';
+import {form} from './form';
+import {home} from './home';
+
+
 
 class App extends Component {
 
@@ -18,14 +24,28 @@ class App extends Component {
 
   render() {
     console.log(this.state)
-    return (
-      <div className="App">
-        <header className="App-header">
-          <div>
-            {this.state.fuckers.name}
-          </div>
-        </header>
-      </div>
+
+   
+    return ( 
+    <div className="App">
+      <h2>Project-consultants mathching system</h2>
+    <div>
+      <React.Fragment>
+          <Router>
+            <Switch>
+             <Route path="/home" component={home} />
+             <Route path="/form" component={form} />
+            </Switch>
+          </Router>
+      </React.Fragment>
+    </div>
+    
+
+     
+
+  </div>
+    
+      
     );
   }
 }
